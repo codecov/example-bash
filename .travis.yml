@@ -1,4 +1,17 @@
 language: generic
 
 before_script:
-  - pip install --user codecov && codecov
+  - gem install codecov
+  - git clone https://github.com/albfan/bashcov.git
+  - cd bashcov/
+  - git checkout debug
+  - gem build bashcov.gemspec
+  - gem install bashcov-1.2.1.gem
+  - cd ..
+  - rm -rf bashcov/
+  - export PATH=$PATH:$PWD
+
+script:
+   - pwd
+   - ls
+   - bashcov -r codecov:SimpleCov::Formatter::Codecov -- script.sh
