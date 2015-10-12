@@ -1,0 +1,4 @@
+language: generic
+
+before_script:
+  - pip install --user codecov && codecov
