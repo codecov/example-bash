@@ -5,6 +5,7 @@ Codecov Bash Example
 | ----------------------- | ------------- | --------------------- |
 
 > This repository serves as an example on how to integrate with Codecov for Bash/Shell language.
+
 > See example coverage here: [![codecov.io](http://codecov.io/github/codecov/example-bash/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-bash?branch=master)
 
 
