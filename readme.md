@@ -4,7 +4,9 @@ Codecov Bash Example
 | [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
 | ----------------------- | ------------- | --------------------- |
 
-This repository serves as an **example** on how to use [Codecov Global][4] for Bash/Shell.
+> This repository serves as an example on how to integrate with Codecov for Bash/Shell language.
+> See example coverage here: [![codecov.io](http://codecov.io/github/codecov/example-bash/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-bash?branch=master)
+
 
 # travis-ci.org
 
