@@ -1,3 +1,5 @@
+#!/bin/bash
+
 a_function(){
     echo "$1"
     if [ "$1" = "1" ];
@@ -16,3 +18,12 @@ then
 else
     echo "missed"
 fi
+
+DATA="something"
+
+cat << EOF
+Code detect as
+   executed
+   $DATA
+EOF
+
