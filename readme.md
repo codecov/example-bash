@@ -67,6 +67,8 @@ env:
 
 View source and learn more about [Codecov Global Uploader][4]
 
+We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
+
 [1]: https://codecov.io/
 [2]: https://twitter.com/codecov
 [3]: mailto:hello@codecov.io
