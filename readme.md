@@ -1,23 +1,8 @@
-Codecov Bash Example
-====================
+# [Codecov](https://codecov.io) Bash Example
 
-| [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
-| ----------------------- | ------------- | --------------------- |
+## Guide
 
-This repository serves as an example on how to integrate with Codecov for Bash/Shell language.
-
-See example coverage here: [![codecov.io](http://codecov.io/github/codecov/example-bash/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-bash?branch=master)
-
-## Basic Usage
-
-Run your tests with [kcov][5] in order to create the necessary coverage
-reports. For example:
-
-```
-kcov output_path script.sh
-```
-
-## travis-ci.org
+### Travis Setup
 
 Add to your `.travis.yml` file.
 ```yml
@@ -48,29 +33,25 @@ after_success: |
   kcov coverage script.sh &&
   bash <(curl -s https://codecov.io/bash)
 ```
-Additional apt packages are [kcov][5] build dependencies.
+Additional apt packages are [kcov][1] build dependencies.
 [Codecov][1] is integrated by the following line in `after_success:`
 
-```yml
-bash <(curl -s https://codecov.io/bash)
+### Produce Coverage Reports
+
+Run your tests with [kcov][1] in order to create the necessary coverage
+reports. For example:
+
+```
+kcov output_path script.sh
 ```
 
-## Private Repos
+## Caveats
+### Private Repo
+Repository tokens are required for (a) all private repos, (b) public repos not using Travis-CI, CircleCI or AppVeyor. Find your repository token at Codecov and provide via appending `-t <your upload token>` to you where you upload reports.
 
-Add to your `.travis.yml` file.
+## Links
+- [Community Boards](https://community.codecov.io)
+- [Support](https://codecov.io/support)
+- [Documentation](https://docs.codecov.io)
 
-```yml
-env:
-  global:
-    - CODECOV_TOKEN=:uuid-repo-token
-```
-
-View source and learn more about [Codecov Global Uploader][4]
-
-We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
-
-[1]: https://codecov.io/
-[2]: https://twitter.com/codecov
-[3]: mailto:hello@codecov.io
-[4]: https://github.com/codecov/codecov-python
-[5]: https://simonkagstrom.github.io/kcov
+[1]: https://simonkagstrom.github.io/kcov
