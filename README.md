@@ -1,4 +1,6 @@
 # [Codecov](https://codecov.io) Bash Example
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-bash.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-bash?ref=badge_shield)
+
 
 ## Guide
 
@@ -55,3 +57,7 @@ Repository tokens are required for (a) all private repos, (b) public repos not u
 - [Documentation](https://docs.codecov.io)
 
 [1]: https://simonkagstrom.github.io/kcov
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-bash.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-bash?ref=badge_large)
