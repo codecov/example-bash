@@ -14,7 +14,7 @@ jobs:
           command: bashcov script.sh
       - run:
           name: Upload reports to Codecov
-          command: bash <(curl -s https://raw.githubusercontent.com/codecov/codecov-bash/master/codecov) -z coverage/codecov-result.json -Z
+          command: bash <(curl -s https://codecov.io/bash) -z coverage/codecov-result.json -Z
 
 workflow:
   version: 2.1
