@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install bundler and dependencies
-          command: gem install bundler && bundle install
+          command: bundle update --bundler && bundle install
       - run:
           name: Run scripts
           command: bashcov script.sh
