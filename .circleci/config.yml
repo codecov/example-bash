@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/ruby:2.7
+    steps:
+      - checkout
+      - run:
+          name: Install bundler and dependencies
+          command: gem install bundler && bundle install
+      - run:
+          name: Run scripts
+          command: bashcov script.sh
+      - run:
+          name: Upload reports to Codecov
+          run: bash <(curl -s https://raw.githubusercontent.com/codecov/codecov-bash/master/codecov) -z coverage/codecov-result.json -Z
+
+workflow:
+  version: 2.1
+  test:
+    jobs:
+      - test
