@@ -1,0 +1,22 @@
+name: Test and coverage
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Install Ruby dependencies
+        command: bundle install
+      - name: Run script
+        command: bashcov script.sh
+      - run:
+          name: Upload reports to Codecov
+          command: |
+            bash <(curl -s https://raw.githubusercontent.com/codecov/codecov-bash/master/codecov) -z coverage/codecov-result.json -Z
