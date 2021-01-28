@@ -12,10 +12,12 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.7'
-      - name: Install Ruby dependencies
-        command: bundle install
-      - name: Run script
-        command: bashcov script.sh
+      - run:
+          name: Install Ruby dependencies
+          command: bundle install
+      - run:
+          name: Run script
+          command: bashcov script.sh
       - run:
           name: Upload reports to Codecov
           command: |
