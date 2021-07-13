@@ -14,7 +14,10 @@ jobs:
           command: bashcov script.sh
       - run:
           name: Upload reports to Codecov
-          command: bash <(curl -s https://codecov.io/bash) -Z
+          command: |
+            curl -Os https://uploader.codecov.io/latest/linux/codecov
+            chmod +x codecov
+            ./codecov -Z
 
 workflow:
   version: 2.1
