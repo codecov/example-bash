@@ -22,4 +22,4 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
         with:
           fail_ci_if_error: true
-          file: coverage/codecov-result.json
+          file: coverage/coverage.xml
