@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5.0.0-beta
         with:
           fetch-depth: 2
       - uses: ruby/setup-ruby@v1
@@ -17,7 +17,7 @@ jobs:
       - name: Run script
         run: bashcov script.sh
       - name: Upload reports to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5.0.0-beta
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_ORG_TOKEN }}
         with:
